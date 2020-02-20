@@ -133,9 +133,52 @@ Aynen yukarda olduğu gibi bu örnekte de fonksiyon dökümanın \<body> kısmı
 > Scriptleri \<body> elementinin içinde en aşağı kısımlara yerleştirmek hız açısından avantajlı olacaktır. Zira o script içeriğinin yorumlanması yavaşlık doğurabileceğinden dolayı tüm HTML elementlerinin altına yerleştirildiği zaman çok fazla yansımayacak ve hissedilmeyecektir.
 
 ## External JavaScript
-Scriptler ayrıca tamamen harici dosyalardan da dahil edilebilir.
-```js Esadl
+Scriptler ayrıca tamamen harici dosyalardan da dahil edilebilir. Mesela scriptDosyam isminde bir JS dosyası oluşturalım ve içeriğini örnekteki hale getirelim.
+```js
 function myFunction() {
  document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
 ```
+Farklı sayfalarda da kullanabileceğimiz scriptleri böyle dosya haline getirip kod fazlalığını önlememiz mümkün. Javascript dosyalarının uzantısı `.js` olmalıdır. Şimdi bu dosyayı HTML dökümanımıza gömmek için script etiketlerini açacağız ve src özelliğine bu dosyayı belirteceğiz:
+```html
+ <script src="myScript.js"></script> 
+```
+Bu script etiketlerini de yukarıda değindiğimiz üzere \<head> veya \<body> elementleri içerisinde kullanabiliriz.
+> Harici script dosyaları \<script> tagları içermez.
+
+## External JavaScript Avantajları
+JavaScript kodlarını harici dosyalara taşımanın bazı avantajları mevcut:
+* HTML ve JS kodlarının birbirine karışmasını önler.
+* Okunabilirliği arttırır.
+* Script dosyalarını re-usable yani tekrar kullanılabilir hale getirir, böylelikle birbirini tekrar eden kodlar da ortadan kalkmış olur.
+
+Bir kaç tane script dosyasını HTML dökümanına gömmek için bir kaç tane \<script> etiketi kullanabiliriz.
+```html
+ <script src="myScript.js"></script> 
+ <script src="myScript2.js"></script> 
+```
+## External Referansları
+Harici script dosyaları URL ile veya ilişkili bir dosya yolu ile belirtilebilir.
+
+Aşağıdaki örnek tam bir URL adresi kullanmaktadır.
+```html
+<script src="https://www.w3schools.com/js/myScript1.js"></script> 
+```
+
+Aşağıdaki örnek aynı web sitesinin farklı bir klasörünün altındaki dosyayı kullanmaktadır.
+```html
+<script src="/js/myScript1.js"></script> 
+```
+
+Aşağıdaki örnek aynı web sitesinin aynı klasöründeki dosyayı kullanmaktadır.
+```html
+<script src="/js/myScript1.js"></script> 
+```
+
+# JavaScript Çıktıları
+## JavaScript'in Çıktı Alternatifleri
+Javascript farklı yollardan verileri gösterebilir:
+* `innerHTML` kullanarak HTML elementinin içine yazmak
+* `document.write()` kullanarak HTML dökümanına yazmak
+* `window.alert()` kullanarak mesaj kutusu göstermek
+* `console.log()` kullanarak tarayıcının konsoluna yazmak
