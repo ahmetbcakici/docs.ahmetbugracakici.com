@@ -18,7 +18,7 @@ Javascript ve Java gerek konsept gerekse tasarım bakımından birbirlerinden ta
 
 Javascript ilk olarak Brendan Eich tarafından 1995'te ortaya atıldı ve 1997'de ECMA standartı haline geldi. Standartın resmi adı ECMA-262 idi. ECMAScript dilin, resmiyetteki adıdır.
 
-# Introduction
+# Başlayalım
 
 ## Javascript HTML elementlerinin içeriğini değiştirebilir.
 
