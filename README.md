@@ -133,52 +133,252 @@ Aynen yukarda olduğu gibi bu örnekte de fonksiyon dökümanın \<body> kısmı
 > Scriptleri \<body> elementinin içinde en aşağı kısımlara yerleştirmek hız açısından avantajlı olacaktır. Zira o script içeriğinin yorumlanması yavaşlık doğurabileceğinden dolayı tüm HTML elementlerinin altına yerleştirildiği zaman çok fazla yansımayacak ve hissedilmeyecektir.
 
 ## External JavaScript
+
 Scriptler ayrıca tamamen harici dosyalardan da dahil edilebilir. Mesela scriptDosyam isminde bir JS dosyası oluşturalım ve içeriğini örnekteki hale getirelim.
+
 ```js
 function myFunction() {
- document.getElementById("demo").innerHTML = "Paragraph changed.";
+	document.getElementById('demo').innerHTML = 'Paragraph changed.';
 }
 ```
+
 Farklı sayfalarda da kullanabileceğimiz scriptleri böyle dosya haline getirip kod fazlalığını önlememiz mümkün. Javascript dosyalarının uzantısı `.js` olmalıdır. Şimdi bu dosyayı HTML dökümanımıza gömmek için script etiketlerini açacağız ve src özelliğine bu dosyayı belirteceğiz:
+
 ```html
- <script src="myScript.js"></script> 
+<script src="myScript.js"></script>
 ```
+
 Bu script etiketlerini de yukarıda değindiğimiz üzere \<head> veya \<body> elementleri içerisinde kullanabiliriz.
+
 > Harici script dosyaları \<script> tagları içermez.
 
 ## External JavaScript Avantajları
+
 JavaScript kodlarını harici dosyalara taşımanın bazı avantajları mevcut:
-* HTML ve JS kodlarının birbirine karışmasını önler.
-* Okunabilirliği arttırır.
-* Script dosyalarını re-usable yani tekrar kullanılabilir hale getirir, böylelikle birbirini tekrar eden kodlar da ortadan kalkmış olur.
+
+-   HTML ve JS kodlarının birbirine karışmasını önler.
+-   Okunabilirliği arttırır.
+-   Script dosyalarını re-usable yani tekrar kullanılabilir hale getirir, böylelikle birbirini tekrar eden kodlar da ortadan kalkmış olur.
 
 Bir kaç tane script dosyasını HTML dökümanına gömmek için bir kaç tane \<script> etiketi kullanabiliriz.
+
 ```html
- <script src="myScript.js"></script> 
- <script src="myScript2.js"></script> 
+<script src="myScript.js"></script>
+<script src="myScript2.js"></script>
 ```
+
 ## External Referansları
+
 Harici script dosyaları URL ile veya ilişkili bir dosya yolu ile belirtilebilir.
 
 Aşağıdaki örnek tam bir URL adresi kullanmaktadır.
+
 ```html
-<script src="https://www.w3schools.com/js/myScript1.js"></script> 
+<script src="https://www.w3schools.com/js/myScript1.js"></script>
 ```
 
 Aşağıdaki örnek aynı web sitesinin farklı bir klasörünün altındaki dosyayı kullanmaktadır.
+
 ```html
-<script src="/js/myScript1.js"></script> 
+<script src="/js/myScript1.js"></script>
 ```
 
 Aşağıdaki örnek aynı web sitesinin aynı klasöründeki dosyayı kullanmaktadır.
+
 ```html
-<script src="/js/myScript1.js"></script> 
+<script src="/js/myScript1.js"></script>
 ```
 
 # JavaScript Çıktıları
+
 ## JavaScript'in Çıktı Alternatifleri
+
 Javascript farklı yollardan verileri gösterebilir:
-* `innerHTML` kullanarak HTML elementinin içine yazmak
-* `document.write()` kullanarak HTML dökümanına yazmak
-* `window.alert()` kullanarak mesaj kutusu göstermek
-* `console.log()` kullanarak tarayıcının konsoluna yazmak
+
+-   `innerHTML` kullanarak HTML elementinin içine yazmak
+-   `document.write()` kullanarak HTML dökümanına yazmak
+-   `window.alert()` kullanarak mesaj kutusu göstermek
+-   `console.log()` kullanarak tarayıcının konsoluna yazmak
+
+### innerHTML
+
+JavaScript bir HTML elementine erişmek için `document.getElementById(id)` metodunu kullanır.
+
+id özelliği HTML elementini temsil eder. innerHTML özelliği ise HTML elementinin içeriğini temsil eder.
+
+```html
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>My First Web Page</h1>
+		<p>My First Paragraph</p>
+
+		<p id="demo"></p>
+
+		<script>
+			document.getElementById('demo').innerHTML = 5 + 6;
+		</script>
+	</body>
+</html>
+```
+
+> Bir bilgiyi HTML'de göstermek için innerHTML özelliğini değiştirmek yaygın olarak kullanılan yöntemdir.
+
+### document.write()
+
+Test amacıyla kullanımı uygundur.
+
+```html
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>My First Web Page</h1>
+		<p>My first paragraph.</p>
+
+		<script>
+			document.write(5 + 6);
+		</script>
+	</body>
+</html>
+```
+
+> Bir HTML dökümanı yüklendikten sonra `document.write()` methodunu kullanmak bütün HTML'i silecektir. Aşağıdaki örnekte bu durum mevcuttur.
+
+```html
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>My First Web Page</h1>
+		<p>My first paragraph.</p>
+
+		<button type="button" onclick="document.write(5 + 6)">Try it</button>
+	</body>
+</html>
+```
+
+> Bu metot yalnızca test için kullanılıyor olmalıdır.
+
+### window.alert()
+
+Bilgiyi göstermek için mesaj kutusu kullanılması da mümkün.
+
+````html
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>My First Web Page</h1>
+		<p>My first paragraph.</p>
+
+		<script>
+			window.alert(5 + 6);
+		</script>
+	</body>
+</html>
+```
+````
+
+### console.log()
+
+Alınacak çıktıları test etmek için ve debugging aşamasında sıkça kullanılan yöntem olarak tarayıcının konsoluna da bilgiyi yazdırabiliriz.
+
+> İlerleyen kısımlarda debugging hakkında daha fazla bilgi sahibi olacağız.
+
+```html
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			console.log(5 + 6);
+		</script>
+	</body>
+</html>
+```
+
+# JavaScript Statements
+
+Statements örnekleri:
+
+```javascript
+var x, y, z; // Statement 1
+x = 5; // Statement 2
+y = 6; // Statement 3
+z = x + y; // Statement 4
+```
+
+## JavaScript Programları
+
+Aslında bir bilgisayar programı, bilgisayar tarafından çalıştırılacak talimatlar listesidir. Bir programlama dilinde bu programlama talimatları **statements** olarak ifade edilir.
+
+> HTML'de JavaScript programları web tarayıcıları tarafından çalıştırılır.
+
+## JavaScript Statements
+
+JavaScript statementları şunlardan oluşur:
+Değerler, operatörler, ifadeler, keywordler ve yorumlar.
+
+Örnekteki statement tarayıcıya, id'si 'demo' değerine eşit olan HTML elementinin içine 'Merhaba' yazmasını söyler.
+
+```js
+document.getElementById('demo').innerHTML = 'Merhaba';
+```
+
+Çoğu JavaScript programı çokça JavaScript statementı içerir.
+Statementlar da yazıldıkları sıra doğrultusunda tek tek, satır satır çalıştırılır.
+
+## Noktalı Virgüller ;
+
+Noktalı virgüller JavaScript statementlarını ayırır.
+
+Her çalıştırılabilir statementın sonuna noktalı virgül ekleyebiliriz.
+
+```js
+var a, b, c; // 3 değişken oluştur
+a = 5; // 5 değerini a değişkenine ata
+b = 6; // 6 değerini b değişkenine ata
+c = a + b; // a ve b değişkenlerinin toplamını c değişkenine ata
+```
+
+Ayrıca birden fazla statementta eğer noktalı virgüllerle ayrılırsa tek satırda bulunmaları mümkün.
+
+```js
+a = 5;b = 6;c = a + b;
+```
+
+> Araştırma yaparken bazı projelerde noktalı virgül kullanılmadığını görebilirsiniz. JavaScript dilinde noktalı virgül kullanımı zorunlu değil fakat herhangi sorun yaşanmaması için oldukça tavsiye edilmektedir.
+
+## JavaScript Beyaz Alan
+
+JavaScript birden fazla boşluğu (space karakterini) yok sayar. Scriptinize okunabilirliğini arttırmak için beyaz alanlar ekleyebilirsiniz. Aşağıda örnekteki iki satır da birbirine denktir.
+
+```js
+var person='Hege';
+var person = 'Hege';
+```
+Operatörlerin arasına boşluklar eklemek de iyi olacaktır.
+```js
+var x = y + z; 
+```
+## JavaScript Satır Uzunlukları ve Satır Bitimleri
+Okunabilirlik için programcılar çoğunlukla 80 karakterden uzun kod satırları yazmayı tercih etmezler.
+
+Eğer bir JavaScript statementı tek satıra sığmıyor veya okunabilirliği bozuyor ise o satırı bir operatörden sonra bitirip yenisine geçebiliriz.
+```js
+document.getElementById("demo").innerHTML =
+"Hello!"; 
+```
+## JavaScript Kod Blokları
+JavaScript statementları kod bloklarında süslü parantezler { . . . } içerisinde birbirleriyle grup haline gelebilirler.
+
+Kod bloklarının amacı birlikte çalışacak statementları gruplamaktır. Bu durumu fonksiyonlarda görebiliriz.
+```js
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+```
+> İlerleyen kısımlarda fonksiyonlar hakkında daha fazla bilgi sahibi olacağız.
+## JavaScript Keywords
+JavaScript statementları yapılacak işin belirtilmesi için genellikle bir **keyword** ile başlar.
+
+JavaScript'te tüm rezerve edilmiş keywordleri görüntülemek için [tıklayınız](https://www.w3schools.com/js/js_reserved.asp)
+>JavaScript keywordleri rezerve edilmiş anahtar kelimelerdir. Bunlar değişken, fonksiyon vb. tanımlanırken kullanılamaz.
