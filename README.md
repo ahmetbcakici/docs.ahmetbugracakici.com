@@ -346,7 +346,7 @@ a = 5;b = 6;c = a + b;
 
 > Araştırma yaparken bazı projelerde noktalı virgül kullanılmadığını görebilirsiniz. JavaScript dilinde noktalı virgül kullanımı zorunlu değil fakat herhangi sorun yaşanmaması için oldukça tavsiye edilmektedir.
 
-## JavaScript Beyaz Alan
+## JavaScript Beyaz Alan (White-Space)
 
 JavaScript birden fazla boşluğu (space karakterini) yok sayar. Scriptinize okunabilirliğini arttırmak için beyaz alanlar ekleyebilirsiniz. Aşağıda örnekteki iki satır da birbirine denktir.
 
@@ -377,8 +377,69 @@ function myFunction() {
 }
 ```
 > İlerleyen kısımlarda fonksiyonlar hakkında daha fazla bilgi sahibi olacağız.
-## JavaScript Keywords
+## JavaScript Anahtar Kelimeler (Keywords)
 JavaScript statementları yapılacak işin belirtilmesi için genellikle bir **keyword** ile başlar.
 
 JavaScript'te tüm rezerve edilmiş keywordleri görüntülemek için [tıklayınız](https://www.w3schools.com/js/js_reserved.asp)
 >JavaScript keywordleri rezerve edilmiş anahtar kelimelerdir. Bunlar değişken, fonksiyon vb. tanımlanırken kullanılamaz.
+# JavaScript Sözdizimi (Syntax)
+JavaScript syntaxı aslında kurallar dizisidir. JavaScript programlarının yapılandırılmasına dair tariftir de diyebiliriz.
+```js
+var x, y, z;       // Değişken nasıl tanımlanır
+x = 5; y = 6;      // Değer nasıl atanır
+z = x + y;         // Hesaplama nasıl yapılır
+```
+## JavaScript Değişkenleri (Variables)
+Bir programlama dilinde değişken kavramı aslında içinde veri bulunan bir kutu gibidir.
+
+JavaScript değişken tanımlamalarında `var` anahtar kelimesini kullanır.
+
+`=` operatörü ile de tanımlanan değişkenlere, değer ataması yapılabilir.
+
+Bu örnekte 'x' bir değişken olarak tanımlanmış ve içerisine 6 değeri atanmıştır.
+```js
+var x;
+x = 6; 
+```
+## JavaScript Operatörleri
+JavaScript hesaplama işlemleri için **aritmetik operatörleri ( +, -, \*, / )** kullanır.
+```js
+(5 + 6) * 10
+```
+JavaScript değer atama işlemleri için **atama operatörünü ( = )** kullanır.
+```js
+var x, y;
+x = 5;
+y = 6; 
+```
+## JavaScript Yorumları
+Bütün JavaScript statementları çalıştırılabilir değildir.
+
+// ifadelerinden sonrasına veya /* ve */ ifadeleri arasına yazılacak içerikler yorum satırı olacaktır.
+
+Yorum satırları da yok sayılacak, çalıştırılmayacaktır.
+```js
+var x = 5; // Çalıştırılacak
+// var x = 6; Çalıştırılmayacak
+```
+## JavaScript Tanımlayıcılar (Identifiers)
+Tanımlıyıcılar aslında isimlerdir.
+
+JavaScript'te tanımlayıcılar değişkenleri (ve anahtar kelimeleri, fonksiyonları) adlandırmak için kullanılır.
+
+Geçerli isimlendirme için kurallar genelde çoğu programlama dilinde aynıdır.
+
+JavaScript isimlendirmesinde ilk karakter muhakkak bir harf veya bir alt tire (_) veya bir dolar simgesi ($) olmalıdır. Sonraki karakterler yine harf, alt tire, dolar işareti ve rakamlardan oluşabilir.
+>İlk karakter olarak rakam verilemez.
+## JavaScript Küçük-Büyük Harf Duyarlıdır
+Tüm JavaScript tanımlayıcıları küçük-büyük harflere duyarlıdır. Mesela `soyad` ve `soyAd` değişkenleri, birbirinden bağımsız iki değişkendir.
+```js
+var soyad, soyAd;
+soyad = "John";
+soyAd = "Doe";
+```
+Bir diğer örnek olarak JavaScript `var` anahtar kelimesini `Var`, `VAR` gibi şekillerde yazıldığı zaman anlayamaz ve yorumlayamaz.
+## JavaScript Karakter Seti
+JavaScript **Unicode** karakter setini kullanır.
+
+**Unicode** dünyadaki tüm karakterleri, sembolleri ve noktalama işaretlerini barındırır. Detaylı bilgi için [göz atabilirsiniz](https://www.w3schools.com/charsets/ref_html_utf8.asp).
