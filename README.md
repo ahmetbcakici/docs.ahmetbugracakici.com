@@ -442,4 +442,4 @@ Bir diğer örnek olarak JavaScript `var` anahtar kelimesini `Var`, `VAR` gibi �
 ## JavaScript Karakter Seti
 JavaScript **Unicode** karakter setini kullanır.
 
-**Unicode** dünyadaki tüm karakterleri, sembolleri ve noktalama işaretlerini barındırır. Detaylı bilgi için [göz atabilirsiniz](https://www.w3schools.com/charsets/ref_html_utf8.asp).
+**Unicode** global olarak tüm karakterleri, sembolleri ve noktalama işaretlerini barındırır. Detaylı bilgi için [göz atabilirsiniz](https://www.w3schools.com/charsets/ref_html_utf8.asp).
