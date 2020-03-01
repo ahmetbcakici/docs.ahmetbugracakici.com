@@ -443,3 +443,53 @@ Bir diğer örnek olarak JavaScript `var` anahtar kelimesini `Var`, `VAR` gibi �
 JavaScript **Unicode** karakter setini kullanır.
 
 **Unicode** global olarak tüm karakterleri, sembolleri ve noktalama işaretlerini barındırır. Detaylı bilgi için [göz atabilirsiniz](https://www.w3schools.com/charsets/ref_html_utf8.asp).
+# JavaScript Yorumları
+JavaScript yorumları JavaScript kodunu açıklamak ve okunur kılmak maksadıyla kullanılır.
+
+Ayrıca sık olarak da mevcut kod satırlarının çalışmasını (test maksadıyla) engellemek için kullanılır.
+
+## Tek Satır Yorumlar
+Tek satır yorumlar `//` ile başlar.
+
+`//` işaretleri ile bu işaretlerin konulduğu satırın sonuna kadar yazılacak şeyler JavaScript tarafından yok sayılır yani çalıştırılmaz.
+
+Aşağıda her kod satırından önce kullanılarak örneklenmiştir.
+```js
+// baslik ID'sine sahip nesnenin içeriğini değiştirir:
+document.getElementById("baslik").innerHTML = "Benim İlk Sayfam!";
+
+// paragraf ID'sine sahip nesnenin içeriğini değiştirir:
+document.getElementById("paragraf").innerHTML = "Benim ilk paragrafım.";
+```
+Aşağıdaki örneğimizde ise kod satırlarının bitiminde satıra dahil olarak kullanmıştır.
+```js
+var x = 5;      // x isminde değişken tanımla ve 5 değerini ata
+var y = x + 2;  // y isminde değişken tanımla ve x değişkenini 2 ile toplayarak ortaya çıkan sonucu ata
+```
+## Çok Satır Yorumlar
+Birden fazla satırda yorumlar için `/*` işaretleriyle başlanır ve `*/` işaretleri ile bitirilir. Bu iki işaretleme arasında bulunacak tüm yazılar yorum satırı olacaktır. Aşağıda örnek verilmiştir.
+```js
+/*
+Aşağıdaki kod
+ID'si baslik ve paragraf olan 
+HTML elementlerinin içeriğini
+benim web sayfamda değiştirecektir.
+*/
+document.getElementById("baslik").innerHTML = "Benim İlk Sayfam!";
+document.getElementById("paragraf").innerHTML = "Benim ilk paragrafım.";
+```
+>Tek satır yorumlar sıkça kullanılmakla beraber çok satır yorumlara ise genelde resmi dökümantasyonlarda yer verilmektedir.
+## Kodların Çalışmasını Önlemek İçin Yorumları Kullanmak
+Bir ürünü veya programı henüz geliştirme aşamasındayken test maksatlı bazı kodları çalıştırmamız veya çalışmasını önlememiz gerekebilir. Eğer yorum satırları olmasaydı çalışmasını önlemek için tabii ki kodu silmemiz gerekecekti. Fakat çalışmasını istemediğimiz kodu test ve geliştirme aşamasındayken yorum satırı haline çevirirsek JavaScript onu yok sayacak ve çalıştırmayacaktır.
+
+```js
+//document.getElementById("baslik").innerHTML = "Benim İlk Sayfam!";
+document.getElementById("paragraf").innerHTML = "Benim ilk paragrafım.";
+```
+Ayrıca çoklu yorum satırları ile de çokça kod bloğunun çalışmasını engellememiz mümkün.
+```js
+/*
+document.getElementById("baslik").innerHTML = "Benim İlk Sayfam!";
+document.getElementById("paragraf").innerHTML = "Benim ilk paragrafım.";
+*/
+```
