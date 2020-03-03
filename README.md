@@ -493,3 +493,79 @@ document.getElementById("baslik").innerHTML = "Benim İlk Sayfam!";
 document.getElementById("paragraf").innerHTML = "Benim ilk paragrafım.";
 */
 ```
+# JavaScript Değişkenler (Variables)
+Değişkenler aslında verileri barındıran, saklayan kutucuklardır.
+
+Bu örneğimizde `x`, `y` ve `z` değişkendirler.
+```js
+var x = 5;
+var y = 6;
+var z = x + y;
+```
+Yukarıdaki örnekten şu yorumlar çıkartılabilir:
+* x, 5 değerini barındırır.
+* y, 6 değerini barındırır.
+* z, 11 değerini barındırır.
+## Adeta Cebir Gibi
+Yine bu örnekte de `fiyat1`, `fiyat2` ve `toplam` değişkendirler.
+```js
+var fiyat1 = 5;
+var fiyat2 = 6;
+var toplam = fiyat1 + fiyat2;
+```
+Aynen cebirde olduğu gibi programlamada da değerleri ifade etmek için değişkenler (mesela fiyat1) kullanıyoruz.
+
+Aynı şekilde bu değerler ile işlemler yaparak sonuçlara ulaşabiliyoruz
+
+Yukarıdaki örnekten elde bulunan değişkenlerle hesaplama yaparak 11 sonucuna ulaşıldığı görülüyor.
+## JavaScript Tanımlayıcılar (Identifiers)
+Bütün JavaScript değişkenleri tekil isimlerle tanımlanmış olmalılardır.
+
+Bu tekil isimler __tanımlayıcılar__ olarak isimlendirilir.
+
+Tanımlayıcılar x, y gibi kısa isimler olabilmekle beraber yaş, toplam gibi açıklayıcı da olabilir.
+
+Değişkenler (tekil tanımlayıcılar) için genel kurallar:
+* İsim harfler, rakamlar, alt tireler ve dolar sembolleri içerebilir.
+* İsim bir harfle başlamalıdır. Ayrıca dolar sembolü veya alt tire ile de başlayabilir (fakat bu dökümantasyonda bu şekilde kullanım yapılmayacaktır.)
+* İsimler büyük-küçük harf duyarlıdır. (y ve Y farklı değişkenlerdir)
+* Rezerve edilmiş kelimeler, anahtar kelimeler isim olarak kullanılamaz.
+
+## JavaScript Veri Tipleri
+JavaScript değişkenleri sayıları tutabileceği gibi metinleri de tutabilir.
+
+JavaScript çokça tip veriyi tutabilir fakat şuan için sadece sayılar ve metinleri düşünelim.
+
+Metinler tek tırnak veya çift tırnak içerisine yazılabilir. Sayılar ise herhangi bir tırnak içerisinde olmaksızın doğrudan yazılırlar. Eğer sayıları da tırnak içinde yazarsanız metin olarak kabul edileceklerdir.
+```js
+var pi = 3.14;
+var person = "John Doe";
+var answer = 'Yes I am!';
+```
+
+## JavaScript Değişkeni Oluşturma
+`var` anahtar kelimesi ile JavaScript'te değişken tanımlamamız mümkün.
+```js
+var arabaAdi;
+```
+Bu şekilde tanımladıktan sonra değişken herhangi bir değere sahip olmayacaktır (teknik olarak `undefined` değerine sahip olacaktır.).
+
+Tanımlanan değişkene değer atamak için eşittir (`=`) sembolünü kullanabiliriz.
+```js
+arabaAdi = "Volvo";
+```
+Aynı zamanda değişkeni tanımlama esnasında da değer atamamız mümkün:
+```js
+var arabaAdi = "Volvo";
+```
+Aşağıdaki örnekte `arabaAdi` ismiyle bir değişken oluşturduk ve içerisine "Volvo" değerini atadık.
+
+Sonrasında bu değişkenin değerini çıktı almak için ID'si 'demo' olan bir HTML paragrafının içerisine yazdırdık.
+```html
+<p id="demo"></p>
+
+<script>
+var arabaAdi = "Volvo";
+document.getElementById("demo").innerHTML = arabaAdi;
+</script> 
+```
