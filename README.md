@@ -569,3 +569,4 @@ var arabaAdi = "Volvo";
 document.getElementById("demo").innerHTML = arabaAdi;
 </script> 
 ```
+## Bir Statement, Çokça Değişken
