@@ -570,3 +570,42 @@ document.getElementById("demo").innerHTML = arabaAdi;
 </script> 
 ```
 ## Bir Statement, Çokça Değişken
+Bir statementta birden fazla değişken tanımlayabiliriz.
+
+Statementa `var` ile başlayalım ve değişkenleri virgül ile ayıralım.
+```js
+ var person = "John Doe", carName = "Volvo", price = 200; 
+```
+Bu işlemi birden fazla satıra da ayırabiliriz.
+```js
+var person = "John Doe",
+carName = "Volvo",
+price = 200;
+```
+## Değişkenleri Tekrar Tanımlama
+Eğer bir JavaScript değişkenini tekrar tanımlarsanız önceki değerini kaybetmeyecektir.
+
+Aşağıdaki örnekte `arabaAdi` isimli değişken yine de "Volvo" değerine sahip olacaktır.
+```js
+var carName = "Volvo";
+var carName;
+```
+
+## JavaScript Aritmetik
+Cebirde olduğu gibi JavaScript'te de `=`, `+` gibi operatörlerle aritmetik işlemler yapabilirsiniz:
+```js
+var x = 5 + 2 + 3;
+```
+Ayrıca stringlere de uygulamamız mümkün. Bu durumda stringler birleşeceklerdir.
+```js
+var x = "John" + " " + "Doe"; 
+```
+Lütfen şunu da deneyin:
+```js
+var x = "5" + 2 + 3;
+```
+> Eğer tırnak içerisine sayı yerleştirirseniz metin gibi davranacaklar ve geri kalan değerlerle birleşeceklerdir.
+Şimdi de şunu deneyin:
+```js
+var x = 2 + 3 + "5";
+```
