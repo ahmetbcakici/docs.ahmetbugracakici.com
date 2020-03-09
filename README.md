@@ -609,3 +609,71 @@ var x = "5" + 2 + 3;
 ```js
 var x = 2 + 3 + "5";
 ```
+# JavaScript Operatörleri
+Önceki örneklerimize aslında operatörlerin bir kısmını görmüş ve kullanmıştık.
+
+Atama operatörümüz (`=`) ile tanımlanan değişkene değer atayabiliriz.
+```js
+var x = 10; 
+```
+Toplama operatörümüz (`+`) ile sayılar üzerinde toplama işlemi yapabiliriz.
+```js
+var x = 5;
+var y = 10;
+var sum = x + y;
+```
+Çarpma operatörümüz (`*`) ile sayıları birbirleri ile çarpabiliriz.
+```js
+var x = 5;
+var y = 2;
+var z = x * y;
+```
+## JavaScript Aritmetik Operatörler
+Aritmetik operatörleri sayesinde sayılar üzerinde aritmetik işlemler yapabiliriz.
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Operatör</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>+</td>
+            <td>Toplama</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Çıkarma</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Çarpma</td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td>Üs (kuvvet) alma</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Bölme</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Mod alma</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td>Arttırma</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>Azaltma</td>
+        </tr>
+    </tbody>
+</table>
+
+> JavaScript Aritmetik kısmında bu operatörleri daha detaylı görecek ve kullanacağız.
+# JavaScript Atama Operatörleri
