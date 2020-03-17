@@ -676,4 +676,180 @@ Aritmetik operatörleri sayesinde sayılar üzerinde aritmetik işlemler yapabil
 </table>
 
 > JavaScript Aritmetik kısmında bu operatörleri daha detaylı görecek ve kullanacağız.
-# JavaScript Atama Operatörleri
+## JavaScript Atama Operatörleri
+Atama operatörleri ile değişkenlere belirtilen değerler atanır.
+<table>
+    <thead>
+        <tr>
+            <th>Operatör</th>
+            <th>Örnek</th>
+            <th>Eşdeğer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>=</td>
+            <td>x = y</td>
+            <td>x = y</td>
+        </tr>
+        <tr>
+            <td>+=</td>
+            <td>x += y</td>
+            <td>x = x + y</td>
+        </tr>
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+        </tr>
+        <tr>
+            <td>*=</td>
+            <td>x *= y</td>
+            <td>x = x * y</td>
+        </tr>
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+        </tr>
+        <tr>
+            <td>%=</td>
+            <td>x %= y</td>
+            <td>x = x % y</td>
+        </tr>
+        <tr>
+            <td>**=</td>
+            <td>x **= y</td>
+            <td>x = x ** y</td>
+        </tr>
+    </tbody>
+</table>
+
+(`+=`) operatörü değeri değişkene ilave eder.
+> Atama operatörleri hakkında detaylı anlatım **JavaScript Atama** kısmında yapılacaktır.
+
+## JavaScript Metin Operatörleri
+`+` operatörü metinleri birleştirmek için de kullanılır.
+```js
+var txt1 = "John";
+var txt2 = "Doe";
+var txt3 = txt1 + " " + txt2;
+```
+Çıktısı: `John Doe` olacaktır.	
+
++= toplama ve atama operatörü de yine metinler için geçerlidir. 
+```js
+var txt1 = "What a very ";
+txt1 += "nice day"; 
+```
+Çıktısı: `What a very nice day` olacaktır.
+
+> `+` operatörü metinler ile kullanıldığı zaman **birleştirme operatörü** olarak isimlendirilir.
+## Metinler ve Sayılar Arasında İşlem
+İki sayıyı toplamak bunların toplamını döndürecektir ama bir sayı ve bir metni toplamak geriye metin döndürecektir.
+```js
+var x = 5 + 5;
+var y = "5" + 5;
+var z = "Hello" + 5;
+```
+Çıktı sırasıyla:
+<code>
+10
+55
+Hello5
+</code>
+> Eğer string ve int değerleri toplamaya çalışırsanız sonuç string olacaktır.
+## JavaScript Karşılaştırma Operatörü
+<table>
+    <thead>
+        <tr>
+            <th>Operatör</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>==</td>
+            <td>Eşittir</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>Denktir</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>Eşit değildir</td>
+        </tr>
+        <tr>
+            <td>!==</td>
+            <td>Denk değildir</td>
+        </tr>
+        <tr>
+            <td>></td>
+            <td>Büyüktür</td>
+        </tr>
+        <tr>
+            <td><</td>
+            <td>Küçüktür</td>
+        </tr>
+        <tr>
+            <td>>=</td>
+            <td>Büyüktür veya eşittir (Büyük eşittir)</td>
+        </tr>
+        <tr>
+            <td><=</td>
+            <td>Küçüktür veya eşittir (Küçük eşittir)</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>Ternary operatörü<td>
+        </tr>
+    </tbody>
+</table>
+
+> Karşılaştırma operatörleri hakkında detaylı anlatım **JavaScript Karşılaştırma** kısmında yapılacaktır.
+
+## JavaScript Mantık Operatörleri
+<table>
+    <thead>
+        <tr>
+            <th>Operatör</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>&&</td>
+            <td>VE</td>
+        </tr>
+        <tr>
+            <td>||</td>
+            <td>VEYA<td>
+        </tr>
+        <tr>
+            <td>!</td>
+            <td>DEĞİL<td>
+        </tr>
+    </tbody>
+</table>
+
+> Mantık operatörleri hakkında detaylı anlatım **JavaScript Karşılaştırma** kısmında yapılacaktır.
+## JavaScript Tip Operatörleri
+<table>
+    <thead>
+        <tr>
+            <th>Operatör</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>typeof</td>
+            <td>Değişkenin tipini döner</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>VEYA<td>
+        </tr>
+    </tbody>
+</table>
